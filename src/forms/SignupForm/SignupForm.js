@@ -9,6 +9,9 @@ import {
   CircularProgress
 } from '@material-ui/core';
 import { FieldTextInput } from '../../components';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import { Dropdown } from 'semantic-ui-react'
+
 
 const USER_TAKEN = 'auth/email-already-in-use';
 
@@ -35,6 +38,15 @@ const useStyles = makeStyles((theme) => ({
     }
   }
 }));
+const options = [
+  { key: 1, text: 'Choice 1', value: 1 },
+  { key: 2, text: 'Choice 2', value: 2 },
+  { key: 3, text: 'Choice 3', value: 3 },
+]
+
+const DropdownExampleClearable = () => (
+  <Dropdown clearable options={options} selection />
+)
 
 const SignupForm = props => {
 
@@ -94,6 +106,54 @@ const SignupForm = props => {
                   autoComplete="email"
                 />
               </Grid>
+
+
+              <Grid item xs={12}>
+              <FieldTextInput
+                  variant="outlined"
+                  
+                  type="email"
+                  id="email"
+                  label="Position"
+                  name="email"
+                  
+                />
+              </Grid>
+
+              <Grid item xs={12}>
+              <FieldTextInput
+                  variant="outlined"
+                  
+                  type="email"
+                  id="email"
+                  label="Province"
+                  name="email"
+                  
+                />
+              </Grid>
+
+              <Grid item xs={12}>
+              <FieldTextInput
+                  variant="outlined"
+
+                  type="email"
+                  id="email"
+                  label="District"
+                  name="email"
+                  
+                />
+              </Grid >
+              <Grid item xs={12}>
+              <FieldTextInput
+                  variant="outlined"
+
+                  type="email"
+                  id="email"
+                  label="School"
+                  name="email"
+                  
+                />
+                </Grid>
               <Grid item xs={12}>
                 <FieldTextInput
                   variant="outlined"
